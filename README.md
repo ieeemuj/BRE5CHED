@@ -1,5 +1,5 @@
 # Website for BRE4CHED
-_Introducing IEEE's MUJ _
+_Introducing IEEE MUJ's annual Cryptic Hunt_
 
 ## Setup instructions
 - A sample `.env` file by name of `.sampleenv` is saved into the base folder

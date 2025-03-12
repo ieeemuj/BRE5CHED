@@ -141,7 +141,7 @@ exports.restrictTo = (...roles) => {
 // 5. Logout uses
 exports.logout = (req, res, next) => {
 	res.cookie("jwt", "loggedout", {
-		expires: new Date(Date.now() + 10),
+		expiresIn: new Date(Date.now() + 10),
 	});
 
 	res.status(200).json({

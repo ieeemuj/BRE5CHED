@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const xss = require("xss-clean");
+const dotenv = require("dotenv");
+
+dotenv.config()
 
 const userRouter = require("./routes/userRouter");
 const questionsRouter = require("./routes/questionsRouter");

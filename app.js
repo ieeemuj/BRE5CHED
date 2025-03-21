@@ -21,18 +21,18 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "public", "views"));
 
+mongoose.set("strictQuery", true);
+
 mongoose
 	.connect(process.env.MONGO_SRV, {
 		useNewUrlParser: true,
-		useCreateIndex: true,
 		useUnifiedTopology: true,
-		useFindAndModify: false,
 	})
 	.then(() => {
 		console.log("MongoDB connected successfully!");
 	})
 	.catch((err) => {
-		console.log(err);
+		console.error("MongoDB connection error:", err);
 	});
 
 app.use(helmet());
